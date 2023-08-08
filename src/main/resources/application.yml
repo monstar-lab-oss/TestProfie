@@ -1,0 +1,13 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    url: jdbc:postgresql://${DATABASE_HOST:localhost}:${DATABASE_PORT:5435}/${DATABASE_NAME:template}
+    username: ${DATABASE_USER:templateUser}
+    password: ${DATABASE_PASSWORD:templatePassword}
+
+    jpa:
+      hibernate:
+        ddl-auto: validate
+      database: postgresql
+      database-platform: org.hibernate.dialect.PostgreSQLDialect
